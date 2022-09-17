@@ -1,0 +1,10 @@
+#navbar {
+    position: sticky;
+    top: 0;
+}
+
+#logo {
+    padding-left: 10px;  
+    width: 128px;
+    height: 128px;
+}
