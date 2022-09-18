@@ -1,9 +1,8 @@
-html, body {
-  margin: 0;
-  height: 100%;
+* {
+  background-color: #24527a;
 }
 
-.App {
-  height: 100vh;
-  background-color: #24527A;
+html,
+body {
+  margin: 0;
 }
