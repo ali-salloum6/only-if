@@ -3,7 +3,7 @@ import logo from "../assets/logo_transparent.png";
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav id="navbar">
       <img id="logo" src={logo} alt="Only If logo" />
     </nav>
   );
