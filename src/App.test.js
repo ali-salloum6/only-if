@@ -1,4 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("", () => {});
+test("Navbar should be in the app", () => {
+  render(<App />);
+  const navBarElement = screen.getByTestId("navbar");
+  expect(navBarElement).toBeInTheDocument();
+});
