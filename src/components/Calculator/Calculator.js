@@ -8,6 +8,13 @@ function Calculator() {
         <img id="title-logo" src={logo} alt="Only If" />
         <h1 id="title">NLY IF</h1>
       </div>
+      <form>
+        <h3 className="wish">I wish I invested</h3>
+        <label>
+          <input id="amount-input" type="text" placeholder="Amount" />
+        </label>
+        <h3 className="wish">in</h3>
+      </form>
     </div>
   );
 }
