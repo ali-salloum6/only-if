@@ -16,8 +16,23 @@
   justify-content: flex-start;
 }
 
+#title-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+#title-logo {
+  display: inline-block;
+  width: 40px;
+}
+
 #title {
-  width: 40%;
-  background-color: inherit;
-  margin: 10px 0;
+  display: inline-block;
+  margin: 0;
+  color: #5dacbd;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 5px;
 }

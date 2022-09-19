@@ -1,10 +1,13 @@
 import "./Calculator.css";
-import title from "../../assets/title_image.png";
+import logo from "../../assets/logo_transparent.png";
 
 function Calculator() {
   return (
     <div id="calc">
-      <img id="title" src={title} alt="Only If" />
+      <div id="title-section">
+        <img id="title-logo" src={logo} alt="Only If" />
+        <h1 id="title">NLY IF</h1>
+      </div>
     </div>
   );
 }
