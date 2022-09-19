@@ -93,3 +93,9 @@
 #currency-input:focus {
   outline: none;
 }
+
+#second-line {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}

@@ -21,6 +21,9 @@ function Calculator() {
             <option value="bnb">BNB</option>
           </select>
         </label>
+        <div id="second-line">
+          <h3 className="wish">optimally during the last 24h</h3>
+        </div>
       </form>
     </div>
   );
