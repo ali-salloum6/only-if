@@ -11,9 +11,16 @@ function Calculator() {
       <form>
         <h3 className="wish">I wish I invested</h3>
         <label>
-          <input id="amount-input" type="text" placeholder="Amount" />
+          <input id="amount-input" type="text" placeholder="_________" />
         </label>
-        <h3 className="wish">in</h3>
+        <h3 className="wish">$ in</h3>
+        <label>
+          <select id="currency-input">
+            <option value="bitcoin">Bitcoin</option>
+            <option value="ethereum">Ethereum</option>
+            <option value="bnb">BNB</option>
+          </select>
+        </label>
       </form>
     </div>
   );

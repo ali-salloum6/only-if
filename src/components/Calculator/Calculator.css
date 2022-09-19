@@ -42,6 +42,7 @@
   text-align: center;
   color: #5dacbd;
   font-family: "Montserrat", sans-serif;
+  margin: 5px;
 }
 
 #amount-input {
@@ -51,6 +52,7 @@
   color: #5dacbd;
   background-color: #deedf9;
   font-family: "Montserrat", sans-serif;
+  font-size: 1.17em;
 }
 
 #amount-input:focus {
@@ -61,7 +63,7 @@
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #5dacbd;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.17em;
+  font-size: 0.8em;
   opacity: 1; /* Firefox */
 }
 
@@ -77,4 +79,17 @@
   color: #5dacbd;
   font-family: "Montserrat", sans-serif;
   font-size: 1.17em;
+}
+
+#currency-input {
+  background-color: #deedf9;
+  color: #5dacbd;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border: none;
+  font-size: 1.17em;
+}
+
+#currency-input:focus {
+  outline: none;
 }
