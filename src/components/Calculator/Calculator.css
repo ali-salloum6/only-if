@@ -23,6 +23,7 @@
   justify-content: center;
 
   padding: 20px;
+  padding-bottom: 10px;
 }
 
 #title-logo {
@@ -36,75 +37,4 @@
   color: #5dacbd;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 5px;
-}
-
-#input-section {
-  margin: 5px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.wish {
-  display: inline-block;
-  text-align: center;
-  color: #5dacbd;
-  font-family: "Montserrat", sans-serif;
-  margin: 5px;
-}
-
-#amount-input {
-  margin: 0 5px;
-  width: 60px;
-  border: none;
-  color: #5dacbd;
-  background-color: #deedf9;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.17em;
-}
-
-#amount-input:focus {
-  outline: none;
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #5dacbd;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.8em;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #5dacbd;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.17em;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #5dacbd;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.17em;
-}
-
-.dropdown-input {
-  background-color: #deedf9;
-  color: #5dacbd;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  border: none;
-  font-size: 1.17em;
-}
-
-.dropdown-input:focus {
-  outline: none;
-}
-
-.line {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
 }
