@@ -8,7 +8,8 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   margin: auto;
-  margin-top: 12vh;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
 
   display: flex;
   flex-direction: column;
@@ -37,6 +38,13 @@
   letter-spacing: 5px;
 }
 
+#input-section {
+  margin: 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .wish {
   display: inline-block;
   text-align: center;
@@ -47,7 +55,7 @@
 
 #amount-input {
   margin: 0 5px;
-  width: 65px;
+  width: 60px;
   border: none;
   color: #5dacbd;
   background-color: #deedf9;
@@ -81,7 +89,7 @@
   font-size: 1.17em;
 }
 
-#currency-input {
+.dropdown-input {
   background-color: #deedf9;
   color: #5dacbd;
   font-family: "Montserrat", sans-serif;
@@ -90,12 +98,13 @@
   font-size: 1.17em;
 }
 
-#currency-input:focus {
+.dropdown-input:focus {
   outline: none;
 }
 
-#second-line {
+.line {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0;
 }

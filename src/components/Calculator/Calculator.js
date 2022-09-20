@@ -8,21 +8,35 @@ function Calculator() {
         <img id="title-logo" src={logo} alt="Only If" />
         <h1 id="title">NLY IF</h1>
       </div>
-      <form>
-        <h3 className="wish">I wish I invested</h3>
-        <label>
-          <input id="amount-input" type="text" placeholder="_________" />
-        </label>
-        <h3 className="wish">$ in</h3>
-        <label>
-          <select id="currency-input">
-            <option value="bitcoin">Bitcoin</option>
-            <option value="ethereum">Ethereum</option>
-            <option value="bnb">BNB</option>
-          </select>
-        </label>
-        <div id="second-line">
-          <h3 className="wish">optimally during the last 24h</h3>
+      <form id="input-section">
+        <div className="line">
+          <h3 className="wish">I wish I invested</h3>
+          <label>
+            <input id="amount-input" type="text" placeholder="________" />
+          </label>
+          <h3 className="wish">$</h3>
+        </div>
+        <div className="line">
+          <h3 className="wish">in</h3>
+          <label>
+            <select className="dropdown-input">
+              <option value="bitcoin">Bitcoin</option>
+              <option value="ethereum">Ethereum</option>
+              <option value="bnb">BNB</option>
+            </select>
+          </label>
+        </div>
+        <div className="line">
+          <h3 className="wish">optimally during the last</h3>
+        </div>
+        <div className="line">
+          <label>
+            <select className="dropdown-input">
+              <option value="hour">hour</option>
+              <option value="day">day</option>
+              <option value="week">week</option>
+            </select>
+          </label>
         </div>
       </form>
     </div>
