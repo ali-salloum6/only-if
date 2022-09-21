@@ -26,25 +26,29 @@ function Calculator() {
   useEffect(() => {
     let currentTime = +new Date();
     let diffInSec;
+    let interval;
     switch (input.time) {
       case "h":
         diffInSec = 60 * 60;
+        interval = "1s";
         break;
       case "d":
         diffInSec = 60 * 60 * 24;
+        interval = "3m";
         break;
       case "w":
         diffInSec = 60 * 60 * 24 * 7;
+        interval = "15m";
         break;
     }
     let diffInMilliSec = diffInSec * 1000;
     let startTime = currentTime - diffInMilliSec;
     fetch(
-      `https://cryptic-basin-04849.herokuapp.com/https://api.binance.com/api/v3/klines?symbol=${input.currency}USDT&interval=1${input.time}&startTime=${startTime}`
+      `https://cryptic-basin-04849.herokuapp.com/https://api.binance.com/api/v3/klines?symbol=${input.currency}USDT&interval=${interval}&startTime=${startTime}&endTime=${currentTime}&limit=1000`
     )
       .then((response) => response.json())
       .then(function (data) {
-        setProfit(calculateProfit(data));
+        setProfit(calculateProfit(input.amount, data));
       });
   }, [input]);
 
