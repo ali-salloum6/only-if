@@ -38,3 +38,17 @@
   font-family: "Orbitron", sans-serif;
   letter-spacing: 5px;
 }
+
+.wish {
+  display: inline-block;
+  text-align: center;
+  color: #5dacbd;
+  font-family: "Montserrat", sans-serif;
+  margin: 5px;
+}
+
+#result {
+  margin: 30px 5px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 1.7em;
+}

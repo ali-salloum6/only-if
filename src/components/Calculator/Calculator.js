@@ -28,6 +28,9 @@ function Calculator() {
         <h1 id="title">NLY IF</h1>
       </div>
       <InputSection input={input} handleInputChange={handleInputChange} />
+      <h3 id="result" className="wish">
+        I would have earned ___$
+      </h3>
     </div>
   );
 }
