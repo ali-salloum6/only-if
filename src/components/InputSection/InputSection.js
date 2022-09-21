@@ -43,9 +43,9 @@ function InputSection(props) {
             value={props.input.time}
             onChange={props.handleInputChange}
           >
-            <option value="hour">hour</option>
-            <option value="day">day</option>
-            <option value="week">week</option>
+            <option value="h">hour</option>
+            <option value="d">day</option>
+            <option value="w">week</option>
           </select>
         </label>
       </div>

@@ -8,7 +8,7 @@ function Calculator() {
   const [input, setInput] = useState({
     amount: "",
     currency: "BTC",
-    time: "hour",
+    time: "h",
   });
   const [profit, setProfit] = useState(null);
 
@@ -24,6 +24,11 @@ function Calculator() {
   }
 
   useEffect(() => {
+    fetch(
+      `https://cryptic-basin-04849.herokuapp.com/https://api.binance.com/api/v3/klines?symbol=${input.currency}USDT&interval=1${input.time}&startTime=1663354050000`
+    )
+      .then((response) => response.json())
+      .then((data) => console.log(data));
     setProfit(calculateProfit(input));
   }, [input]);
 
