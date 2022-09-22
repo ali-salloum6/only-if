@@ -40,6 +40,9 @@ function Calculator() {
         diffInSec = 60 * 60 * 24 * 7;
         interval = "15m";
         break;
+      default:
+        diffInSec = 0;
+        interval = "1s";
     }
     let diffInMilliSec = diffInSec * 1000;
     let startTime = currentTime - diffInMilliSec;
