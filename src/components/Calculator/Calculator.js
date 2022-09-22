@@ -2,7 +2,7 @@ import "./Calculator.css";
 import logo from "../../assets/logo_transparent.png";
 import InputSection from "../InputSection/InputSection";
 import { useState, useEffect } from "react";
-import calculateProfit from "../../utils/calculateProfit";
+import calculatePosition from "../../utils/calculatePosition";
 
 function Calculator() {
   const [input, setInput] = useState({
@@ -10,7 +10,7 @@ function Calculator() {
     currency: "BTC",
     time: "h",
   });
-  const [profit, setProfit] = useState(null);
+  const [position, setPosition] = useState({});
 
   function handleInputChange(event) {
     const target = event.target;
@@ -51,7 +51,7 @@ function Calculator() {
     )
       .then((response) => response.json())
       .then(function (data) {
-        setProfit(calculateProfit(input.amount, data));
+        setPosition(calculatePosition(input.amount, data));
       });
   }, [input]);
 
@@ -63,7 +63,7 @@ function Calculator() {
       </div>
       <InputSection input={input} handleInputChange={handleInputChange} />
       <h3 id="result" className="wish">
-        I would have earned {profit ? profit : "___"}$
+        I would have made {input.amount ? position.return : "___"}$
       </h3>
     </div>
   );
