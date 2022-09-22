@@ -63,7 +63,8 @@ function Calculator() {
       </div>
       <InputSection input={input} handleInputChange={handleInputChange} />
       <h3 id="result" className="wish">
-        I would have made {input.amount ? position.return : "___"}$
+        I would have made{" "}
+        {!isNaN(position.return) ? Number(position.return.toFixed(2)) : "___"}$
       </h3>
     </div>
   );
