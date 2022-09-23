@@ -66,6 +66,7 @@ function Calculator() {
         I would have made{" "}
         {!isNaN(position.return) ? Number(position.return.toFixed(2)) : "___"}$
       </h3>
+      <h5 id="how">How?</h5>
     </div>
   );
 }
