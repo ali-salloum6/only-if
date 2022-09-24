@@ -3,6 +3,7 @@ import logo from "../../assets/logo_transparent.png";
 import InputSection from "../InputSection/InputSection";
 import { useState, useEffect } from "react";
 import calculatePosition from "../../utils/calculatePosition";
+import ReactTooltip from "react-tooltip";
 
 function Calculator() {
   const [input, setInput] = useState({
@@ -11,6 +12,7 @@ function Calculator() {
     time: "h",
   });
   const [position, setPosition] = useState({});
+  const [tooltip, showTooltip] = useState(true);
 
   function handleInputChange(event) {
     const target = event.target;
@@ -55,6 +57,8 @@ function Calculator() {
       });
   }, [input]);
 
+  let howTo = constructTooltip();
+
   return (
     <div id="calc">
       <div id="title-section">
@@ -66,9 +70,36 @@ function Calculator() {
         I would have made{" "}
         {!isNaN(position.return) ? Number(position.return.toFixed(2)) : "___"}$
       </h3>
-      <h5 id="how">How?</h5>
+      <h5
+        id="how"
+        data-tip={howTo}
+        data-html="true"
+        onMouseEnter={() => showTooltip(true)}
+        onMouseLeave={() => {
+          showTooltip(false);
+          setTimeout(() => showTooltip(true), 50);
+        }}
+      >
+        How?
+      </h5>
+      {tooltip && <ReactTooltip effect="solid" />}
     </div>
   );
+
+  function constructTooltip() {
+    const startDate = new Date(parseInt(position.startTime));
+    const endDate = new Date(parseInt(position.endTime));
+    let howTo = `${position.positionType} position: <br />`;
+    if (position.positionType === "Long") {
+      howTo = howTo + `buy at ${startDate.toString()}<br />`;
+      howTo = howTo + `sell at ${endDate.toString()}`;
+    }
+    if (position.positionType === "Short") {
+      howTo = howTo + `sell at ${startDate.toString()}<br />`;
+      howTo = howTo + `buy at ${endDate.toString()}`;
+    }
+    return howTo;
+  }
 }
 
 export default Calculator;

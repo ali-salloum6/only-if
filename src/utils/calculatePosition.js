@@ -29,13 +29,13 @@ export default function calculatePosition(amount, data) {
     // and save the type of position
     if (longProfitRatio >= maxProfitRatio) {
       maxProfitRatio = longProfitRatio;
-      positionType = "long";
+      positionType = "Long";
       startTime = currentMin.timestamp;
       endTime = data[i].timestamp;
     }
     if (shortProfitRatio >= maxProfitRatio) {
       maxProfitRatio = shortProfitRatio;
-      positionType = "short";
+      positionType = "Short";
       startTime = currentMax.timestamp;
       endTime = data[i].timestamp;
     }
