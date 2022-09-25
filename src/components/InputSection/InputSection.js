@@ -29,6 +29,13 @@ function InputSection(props) {
             <option value="BTC">Bitcoin</option>
             <option value="ETH">Ethereum</option>
             <option value="BNB">BNB</option>
+            <option value="XRP">XRP</option>
+            <option value="ADA">Cardano</option>
+            <option value="SOL">Solana</option>
+            <option value="DOGE">Dogecoin</option>
+            <option value="DOT">Polkadot</option>
+            <option value="MATIC">Polygon</option>
+            <option value="SHIB">Shiba Inu</option>
           </select>
         </label>
       </div>
