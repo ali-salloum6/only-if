@@ -4,7 +4,7 @@ function InputSection(props) {
   return (
     <form id="input-section">
       <div className="line">
-        <h3 className="wish">I wish I invested</h3>
+        <h3 className="wish">I wish I traded</h3>
         <label>
           <input
             name="amount"
@@ -18,7 +18,7 @@ function InputSection(props) {
         <h3 className="wish">$</h3>
       </div>
       <div className="line">
-        <h3 className="wish">in</h3>
+        <h3 className="wish">of</h3>
         <label>
           <select
             name="currency"
