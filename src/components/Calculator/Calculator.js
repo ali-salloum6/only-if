@@ -87,16 +87,17 @@ function Calculator() {
   );
 
   function constructTooltip() {
+    if (isNaN(position.return)) return "";
     const startDate = new Date(parseInt(position.startTime));
     const endDate = new Date(parseInt(position.endTime));
     let howTo = `${position.positionType} position: <br />`;
     if (position.positionType === "Long") {
-      howTo = howTo + `buy at ${startDate.toString()}<br />`;
-      howTo = howTo + `sell at ${endDate.toString()}`;
+      howTo = howTo + `Should have bought on ${startDate.toString()}<br />`;
+      howTo = howTo + `Should have sold on ${endDate.toString()}`;
     }
     if (position.positionType === "Short") {
-      howTo = howTo + `sell at ${startDate.toString()}<br />`;
-      howTo = howTo + `buy at ${endDate.toString()}`;
+      howTo = howTo + `Should have sold on ${startDate.toString()}<br />`;
+      howTo = howTo + `Should have bought on ${endDate.toString()}`;
     }
     return howTo;
   }
