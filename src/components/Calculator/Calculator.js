@@ -49,7 +49,7 @@ function Calculator() {
     let diffInMilliSec = diffInSec * 1000;
     let startTime = currentTime - diffInMilliSec;
     fetch(
-      `https://cryptic-basin-04849.herokuapp.com/https://api.binance.com/api/v3/klines?symbol=${input.currency}USDT&interval=${interval}&startTime=${startTime}&endTime=${currentTime}&limit=1000`
+      `https://api.binance.com/api/v3/klines?symbol=${input.currency}USDT&interval=${interval}&startTime=${startTime}&endTime=${currentTime}&limit=1000`
     )
       .then((response) => response.json())
       .then(function (data) {
